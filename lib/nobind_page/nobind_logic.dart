@@ -35,6 +35,37 @@ class NobindLogic extends GetxController {
     return '${counter.value} ${counterText.value} ${isLogin.value} ${isLogin.value} ${model.value.name} ${model.value.age} \n list的长度：$lastValue';
   }
 
+  var count1 = 0.obs;
+
+  void changeCount() {
+    count1++;
+  }
+
+  @override
+  void onReady() {
+    super.onReady();
+
+    ///每次`count1`变化时调用。
+    ever(count1, (_) => print("$_ has been changed"));
+
+    ///只有在变量$_第一次被改变时才会被调用。
+    once(count1, (_) => print("$_ was changed once"));
+
+    ///防DDos - 每当用户停止输入1秒时调用，输出的最后时刻的值
+    debounce(
+      count1,
+      (_) => print("debounce $_"),
+      time: const Duration(seconds: 1),
+    );
+
+    ///忽略1秒内的所有变化，输出的第一次变化的值(1秒内)
+    interval(
+      count1,
+      (_) => print("interval $_"),
+      time: const Duration(seconds: 1),
+    );
+  }
+
   @override
   void onInit() {
     // 处理传递过来的值
