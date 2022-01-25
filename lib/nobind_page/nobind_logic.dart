@@ -41,25 +41,38 @@ class NobindLogic extends GetxController {
     count1++;
   }
 
+  late Worker everObject;
+  late Worker onceObject;
+  late Worker debounceObject;
+  late Worker intervalObject;
+
+  void cancelWorker() {
+    // 取消worker
+    everObject.dispose();
+    onceObject.dispose();
+    debounceObject.dispose();
+    intervalObject.dispose();
+  }
+
   @override
   void onReady() {
     super.onReady();
 
     ///每次`count1`变化时调用。
-    ever(count1, (_) => print("$_ has been changed"));
+    everObject = ever(count1, (_) => print("$_ has been changed"));
 
     ///只有在变量$_第一次被改变时才会被调用。
-    once(count1, (_) => print("$_ was changed once"));
+    onceObject = once(count1, (_) => print("$_ was changed once"));
 
     ///防DDos - 每当用户停止输入1秒时调用，输出的最后时刻的值
-    debounce(
+    debounceObject = debounce(
       count1,
       (_) => print("debounce $_"),
       time: const Duration(seconds: 1),
     );
 
     ///忽略1秒内的所有变化，输出的第一次变化的值(1秒内)
-    interval(
+    intervalObject = interval(
       count1,
       (_) => print("interval $_"),
       time: const Duration(seconds: 1),
