@@ -37,4 +37,11 @@ class HomeLogic extends GetxController {
       counterText.value = value ?? '默认值';
     });
   }
+
+  void gotoAnimation() {
+    AppNavigator.startWithName(
+      named: AppRoutes.animation,
+      info: {},
+    );
+  }
 }

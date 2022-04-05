@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:getx_demo/animation/animation_binding.dart';
+import 'package:getx_demo/animation/animation_view.dart';
 import 'package:getx_demo/home_page/home_view.dart';
 import 'package:getx_demo/home_page/home_binding.dart';
 import 'package:getx_demo/nobind_page/nobind_view.dart';
@@ -16,6 +18,11 @@ class AppPages {
       // 在界面中手动绑定
       name: AppRoutes.DETAIL,
       page: () => const NobindPage(),
+    ),
+    GetPage(
+      name: AppRoutes.animation,
+      page: () => const AnimationPage(),
+      binding: AnimationBinding(),
     ),
   ];
 }
