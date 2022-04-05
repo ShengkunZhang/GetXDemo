@@ -5,6 +5,8 @@ import 'package:getx_demo/animation/animation_view.dart';
 import 'package:getx_demo/home_page/home_view.dart';
 import 'package:getx_demo/home_page/home_binding.dart';
 import 'package:getx_demo/nobind_page/nobind_view.dart';
+
+import '../animation/transition_animation/transition_animation.dart';
 part 'app_routes.dart';
 
 class AppPages {
@@ -28,6 +30,10 @@ class AppPages {
     GetPage(
       name: AppRoutes.interleavedAnimation,
       page: () => const InterleavedAnimationPage(),
+    ),
+    GetPage(
+      name: AppRoutes.transitionAnimation,
+      page: () => const TransitionAnimationPage(),
     ),
   ];
 }

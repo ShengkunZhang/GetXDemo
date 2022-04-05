@@ -5,6 +5,7 @@ abstract class AppRoutes {
   static const detail = '/detail';
   static const animation = '/animation';
   static const interleavedAnimation = '/interleavedAnimation';
+  static const transitionAnimation = '/transitionAnimation';
 }
 
 extension RoutesExtension on String {

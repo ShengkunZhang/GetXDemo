@@ -51,4 +51,11 @@ class HomeLogic extends GetxController {
       info: {},
     );
   }
+
+  void gotoTransitionAnimation() {
+    AppNavigator.startWithName(
+      named: AppRoutes.transitionAnimation,
+      info: {},
+    );
+  }
 }

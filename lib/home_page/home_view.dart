@@ -42,6 +42,12 @@ class HomePage extends StatelessWidget {
               icon: const Icon(Icons.animation),
               label: const Text('去复杂动画界面'),
             );
+          } else if (index == 4) {
+            return ElevatedButton.icon(
+              onPressed: () => logic.gotoTransitionAnimation(),
+              icon: const Icon(Icons.animation),
+              label: const Text('去转场动画界面'),
+            );
           }
           return Container();
         },
