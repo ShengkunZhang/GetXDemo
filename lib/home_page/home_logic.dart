@@ -25,7 +25,7 @@ class HomeLogic extends GetxController {
   void gotoNextScreen() {
     // 跳转传值 且 接受返回的值
     var result = AppNavigator.startWithName(
-      named: AppRoutes.DETAIL,
+      named: AppRoutes.detail,
       info: {
         'title': '你是谁',
         'des': '这是一个描述信息',

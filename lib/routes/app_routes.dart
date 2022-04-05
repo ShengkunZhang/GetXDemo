@@ -1,8 +1,8 @@
 part of 'app_pages.dart';
 
 abstract class AppRoutes {
-  static const MAINVIEW = "/";
-  static const DETAIL = '/detail';
+  static const mainView = "/";
+  static const detail = '/detail';
   static const animation = '/animation';
   static const interleavedAnimation = '/interleavedAnimation';
 }

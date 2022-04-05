@@ -41,6 +41,16 @@ class NobindPage extends StatelessWidget {
               icon: const Icon(Icons.ice_skating),
               label: const Text('改变当前的数据'),
             ),
+            ElevatedButton.icon(
+              onPressed: () => logic.changeCount(),
+              icon: const Icon(Icons.ice_skating),
+              label: const Text('改变Count1的值'),
+            ),
+            ElevatedButton.icon(
+              onPressed: () => logic.cancelWorker(),
+              icon: const Icon(Icons.ice_skating),
+              label: const Text('取消对Count1的监听'),
+            ),
           ],
         ),
       ),
