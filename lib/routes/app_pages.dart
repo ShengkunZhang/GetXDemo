@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:getx_demo/animation/Interleaved_animation.dart';
 import 'package:getx_demo/animation/animation_binding.dart';
 import 'package:getx_demo/animation/animation_view.dart';
 import 'package:getx_demo/home_page/home_view.dart';
@@ -23,6 +24,10 @@ class AppPages {
       name: AppRoutes.animation,
       page: () => const AnimationPage(),
       binding: AnimationBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.interleavedAnimation,
+      page: () => const InterleavedAnimationPage(),
     ),
   ];
 }

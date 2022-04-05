@@ -36,6 +36,12 @@ class HomePage extends StatelessWidget {
               icon: const Icon(Icons.animation),
               label: const Text('去动画界面'),
             );
+          } else if (index == 3) {
+            return ElevatedButton.icon(
+              onPressed: () => logic.gotoInterleavedAnimation(),
+              icon: const Icon(Icons.animation),
+              label: const Text('去复杂动画界面'),
+            );
           }
           return Container();
         },

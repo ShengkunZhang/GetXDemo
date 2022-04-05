@@ -44,4 +44,11 @@ class HomeLogic extends GetxController {
       info: {},
     );
   }
+
+  void gotoInterleavedAnimation() {
+    AppNavigator.startWithName(
+      named: AppRoutes.interleavedAnimation,
+      info: {},
+    );
+  }
 }
