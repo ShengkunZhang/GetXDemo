@@ -11,12 +11,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // 使用GetMaterialApp 而非 MaterialApp
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      // 路由列表
       getPages: AppPages.routes,
+      // 初始启动页
       initialRoute: AppRoutes.mainView,
     );
   }
